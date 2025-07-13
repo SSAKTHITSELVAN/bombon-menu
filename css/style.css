@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Audiowide&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Audiowide&family=Baumans&family=Chewy&family=Comfortaa:wght@300..700&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap');
+
 /* --- THEME & COLOR SCHEME --- */
 :root {
     --bg-color: #fdfcfa;
     --header-bg: #ffffff;
     --text-color: #333;
-    --accent-color: #92dff3; /* Light blue from logo */
-    --accent-dark: #2a7a97; /* Darker blue from logo for contrast */
+    --accent-color: #92dff3;
+    /* Light blue from logo */
+    --accent-dark: #2a7a97;
+    /* Darker blue from logo for contrast */
     --white: #fff;
 
     /* Extended Pastel Palette for backgrounds */
@@ -13,7 +18,8 @@
     --sundae-pink-bg: #ffe0e9;
     --frappe-tan-bg: #f7e6c4;
     --boba-yellow-bg: #fff9c4;
-    --milkshake-yellow-bg: #fff9c4; /* Same as boba, can be different if needed */
+    --milkshake-yellow-bg: #fff9c4;
+    /* Same as boba, can be different if needed */
     --mojito-green-bg: #e8f5e9;
     --coffee-brown-bg: #d7ccc8;
     --fries-orange-bg: #ffe0b2;
@@ -21,9 +27,12 @@
     --special-purple-bg: #e1bee7;
 
     /* Improved Fonts for Readability & Attractiveness */
-    --font-family-base: 'Quicksand', sans-serif; /* Clean, modern, friendly */
-    --font-family-heading: 'Playfair Display', serif; /* Elegant, eye-catching for titles */
-    --font-family-price: 'Roboto Mono', monospace; /* Monospaced for clear numbers, good readability for prices */
+    --font-family-base: 'Poppins', sans-serif;
+    /* Clean, modern, friendly */
+    --font-family-heading: 'DynaPuff', serif;
+    /* Elegant, eye-catching for titles */
+    --font-family-price: 'Roboto Mono', monospace;
+    /* Monospaced for clear numbers, good readability for prices */
 
     --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -40,7 +49,8 @@ html {
 }
 
 body {
-    font-family: var(--font-family-base); /* Base font */
+    font-family: var(--font-family-base);
+    /* Base font */
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -48,25 +58,29 @@ body {
 
 /* --- LAYOUT & CONTAINERS --- */
 .mobile-container {
-    max-width: 480px; /* Standard mobile width */
+    max-width: 480px;
+    /* Standard mobile width */
     margin: 0 auto;
-    background-color: var(--white); /* This will be overridden by category backgrounds */
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    min-height: 100vh; /* Ensure it takes full viewport height for content */
+    background-color: var(--white);
+    /* This will be overridden by category backgrounds */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    /* Ensure it takes full viewport height for content */
 }
 
 .header {
-    background-color: var(--header-bg);
+    /* background-color: var(--header-bg); */
     padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    max-width: 150px; /* Adjusted size for the new logo */
+    max-width: 150px;
+    /* Adjusted size for the new logo */
     height: auto;
     margin-bottom: 15px;
 }
@@ -74,7 +88,7 @@ body {
 .search-wrapper input {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #eee;
+    border: 1px solid #50bbfd;
     border-radius: 25px;
     font-size: 1rem;
     font-family: var(--font-family-base);
@@ -82,6 +96,7 @@ body {
     outline: none;
     transition: border-color 0.3s;
 }
+
 .search-wrapper input:focus {
     border-color: var(--accent-color);
 }
@@ -94,13 +109,22 @@ body {
     padding: 10px 15px;
     border-bottom: 1px solid #f0f0f0;
     position: sticky;
-    top: 96px; /* Adjust based on header height */
+    top: 96px;
+    /* Adjust based on header height */
     z-index: 999;
-    scrollbar-width: none; /* Firefox */
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* Subtle shadow for nav */
+    scrollbar-width: none;
+    /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    /* For smoother scrolling on iOS */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    /* Subtle shadow for nav */
 }
-.category-nav::-webkit-scrollbar { display: none; } /* Chrome, Safari, Opera */
+
+.category-nav::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chrome, Safari, Opera */
 
 .category-link {
     flex: 0 0 auto;
@@ -118,7 +142,8 @@ body {
     letter-spacing: 0.5px;
 }
 
-.category-link:hover, .category-link.active {
+.category-link:hover,
+.category-link.active {
     background-color: var(--accent-color);
     color: var(--white);
 }
@@ -128,16 +153,21 @@ body {
 }
 
 .menu-category {
-    padding: 30px 20px; /* Generous padding for visual separation */
-    margin-bottom: 0; /* No margin between sections */
+    padding: 30px 20px;
+    /* Generous padding for visual separation */
+    margin-bottom: 0;
+    /* No margin between sections */
     border-radius: 0;
-    color: var(--text-color); /* Default text color, overridden by data-theme */
-    min-height: auto; /* Dynamic height based on content */
+    color: var(--text-color);
+    /* Default text color, overridden by data-theme */
+    min-height: auto;
+    /* Dynamic height based on content */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    overflow: hidden; /* Ensure content doesn't spill if background is smaller */
+    overflow: hidden;
+    /* Ensure content doesn't spill if background is smaller */
 }
 
 .menu-category::before {
@@ -147,136 +177,229 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.4); /* Light translucent overlay */
+    background: rgba(255, 255, 255, 0.4);
+    /* Light translucent overlay */
     z-index: 0;
 }
 
-.menu-category > * {
+.menu-category>* {
     position: relative;
     z-index: 1;
 }
 
 .menu-category h2 {
-    font-family: var(--font-family-heading); /* Heading font */
-    font-size: 2.2rem; /* Larger and more attractive */
+    font-family: var(--font-family-heading);
+    /* Heading font */
+    font-size: 2.2rem;
+    /* Larger and more attractive */
     margin-bottom: 25px;
     font-weight: 700;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.15); /* More pronounced shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    /* More pronounced shadow */
     text-transform: uppercase;
     line-height: 1.2;
 }
 
 .menu-category h3 {
-    font-family: var(--font-family-base); /* Item name font */
-    font-size: 1.25rem; /* Slightly larger for clarity */
-    margin: 0; /* Removed top margin, controlled by .menu-item padding */
-    font-weight: 700; /* Bolder for item names */
-    color: inherit; /* Inherit color from category */
+    font-family: var(--font-family-base);
+    /* Item name font */
+    font-size: 1.25rem;
+    /* Slightly larger for clarity */
+    margin: 0;
+    /* Removed top margin, controlled by .menu-item padding */
+    font-weight: 700;
+    /* Bolder for item names */
+    color: inherit;
+    /* Inherit color from category */
 }
-.menu-category h4 { /* For Boba Tea/Shake subheadings */
+
+.menu-category h4 {
+    /* For Boba Tea/Shake subheadings */
     font-family: var(--font-family-base);
     font-size: 1.15rem;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 700;
-    color: var(--accent-dark); /* Using darker accent for subheadings */
+    color: var(--accent-dark);
+    /* Using darker accent for subheadings */
 }
 
 /* Category Themes with Dynamic Background Images and Text Colors */
 
 /* Waffle Categories - Blue theme from logo */
 .menu-category[data-theme="waffle-blue"] {
-    background-image: url('images/category-backgrounds/waffle-blue.jpg'); /* Placeholder for light blue waffle image */
-    background-color: var(--waffle-blue-bg); /* Fallback */
-    color: #1a237e; /* Dark blue text for high contrast */
+    background-image: url('images/category-backgrounds/waffle-blue.jpg');
+    /* Placeholder for light blue waffle image */
+    background-color: var(--waffle-blue-bg);
+    /* Fallback */
+    color: #1a237e;
+    /* Dark blue text for high contrast */
 }
-.menu-category[data-theme="waffle-blue"] h2 { color: #0d47a1; /* Even darker blue for heading */ }
-.menu-category[data-theme="waffle-blue"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="waffle-blue"] h2 {
+    color: #0d47a1;
+    /* Even darker blue for heading */
+}
+
+.menu-category[data-theme="waffle-blue"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Brownie Category - Brown/Chocolate theme */
 .menu-category[data-theme="brownie-brown"] {
-    background-image: url('images/category-backgrounds/brownie-brown.jpg'); /* Placeholder for brownie image */
+    background-image: url('images/category-backgrounds/brownie-brown.jpg');
+    /* Placeholder for brownie image */
     background-color: var(--brownie-brown-bg);
-    color: #3e2723; /* Dark brown text */
+    color: #3e2723;
+    /* Dark brown text */
 }
-.menu-category[data-theme="brownie-brown"] h2 { color: #5d4037; }
-.menu-category[data-theme="brownie-brown"]::before { background: rgba(255, 255, 255, 0.6); }
+
+.menu-category[data-theme="brownie-brown"] h2 {
+    color: #5d4037;
+}
+
+.menu-category[data-theme="brownie-brown"]::before {
+    background: rgba(255, 255, 255, 0.6);
+}
 
 /* Sundaes Category - Pastel Pink theme */
 .menu-category[data-theme="sundae-pink"] {
-    background-image: url('images/category-backgrounds/sundae-pink.jpg'); /* Placeholder for sundae image */
+    background-image: url('images/category-backgrounds/sundae-pink.jpg');
+    /* Placeholder for sundae image */
     background-color: var(--sundae-pink-bg);
-    color: #880e4f; /* Dark pink text */
+    color: #880e4f;
+    /* Dark pink text */
 }
-.menu-category[data-theme="sundae-pink"] h2 { color: #c2185b; }
-.menu-category[data-theme="sundae-pink"]::before { background: rgba(255, 255, 255, 0.4); }
+
+.menu-category[data-theme="sundae-pink"] h2 {
+    color: #c2185b;
+}
+
+.menu-category[data-theme="sundae-pink"]::before {
+    background: rgba(255, 255, 255, 0.4);
+}
 
 /* Frappuccino Category - Tan/Coffee theme */
 .menu-category[data-theme="frappe-tan"] {
-    background-image: url('images/category-backgrounds/frappe-tan.jpg'); /* Placeholder for coffee/frappe image */
+    background-image: url('images/category-backgrounds/frappe-tan.jpg');
+    /* Placeholder for coffee/frappe image */
     background-color: var(--frappe-tan-bg);
-    color: #4e342e; /* Dark coffee text */
+    color: #4e342e;
+    /* Dark coffee text */
 }
-.menu-category[data-theme="frappe-tan"] h2 { color: #6d4c41; }
-.menu-category[data-theme="frappe-tan"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="frappe-tan"] h2 {
+    color: #6d4c41;
+}
+
+.menu-category[data-theme="frappe-tan"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Boba & Milkshake Categories - Vibrant Yellow theme */
 .menu-category[data-theme="boba-yellow"],
 .menu-category[data-theme="milkshake-yellow"] {
-    background-image: url('images/category-backgrounds/boba-yellow.jpg'); /* Placeholder for boba/milkshake image */
+    background-image: url('images/category-backgrounds/boba-yellow.jpg');
+    /* Placeholder for boba/milkshake image */
     background-color: var(--boba-yellow-bg);
-    color: #f57f17; /* Dark orange/brown text */
+    color: #f57f17;
+    /* Dark orange/brown text */
 }
+
 .menu-category[data-theme="boba-yellow"] h2,
-.menu-category[data-theme="milkshake-yellow"] h2 { color: #e65100; }
+.menu-category[data-theme="milkshake-yellow"] h2 {
+    color: #e65100;
+}
+
 .menu-category[data-theme="boba-yellow"]::before,
-.menu-category[data-theme="milkshake-yellow"]::before { background: rgba(255, 255, 255, 0.6); }
+.menu-category[data-theme="milkshake-yellow"]::before {
+    background: rgba(255, 255, 255, 0.6);
+}
 
 /* Mojito Category - Green/Mint theme */
 .menu-category[data-theme="mojito-green"] {
-    background-image: url('images/category-backgrounds/mojito-green.jpg'); /* Placeholder for mojito image */
+    background-image: url('images/category-backgrounds/mojito-green.jpg');
+    /* Placeholder for mojito image */
     background-color: var(--mojito-green-bg);
-    color: #1b5e20; /* Dark green text */
+    color: #1b5e20;
+    /* Dark green text */
 }
-.menu-category[data-theme="mojito-green"] h2 { color: #388e3c; }
-.menu-category[data-theme="mojito-green"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="mojito-green"] h2 {
+    color: #388e3c;
+}
+
+.menu-category[data-theme="mojito-green"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Hot Beverages Category - Darker Coffee theme */
 .menu-category[data-theme="coffee-brown"] {
-    background-image: url('images/category-backgrounds/coffee-brown.jpg'); /* Placeholder for hot coffee image */
+    background-image: url('images/category-backgrounds/coffee-brown.jpg');
+    /* Placeholder for hot coffee image */
     background-color: var(--coffee-brown-bg);
     color: #3e2723;
 }
-.menu-category[data-theme="coffee-brown"] h2 { color: #5d4037; }
-.menu-category[data-theme="coffee-brown"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="coffee-brown"] h2 {
+    color: #5d4037;
+}
+
+.menu-category[data-theme="coffee-brown"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Fries Category - Orange/Crispy theme */
 .menu-category[data-theme="fries-orange"] {
-    background-image: url('images/category-backgrounds/fries-orange.jpg'); /* Placeholder for fries image */
+    background-image: url('images/category-backgrounds/fries-orange.jpg');
+    /* Placeholder for fries image */
     background-color: var(--fries-orange-bg);
-    color: #e65100; /* Dark orange text */
+    color: #e65100;
+    /* Dark orange text */
 }
-.menu-category[data-theme="fries-orange"] h2 { color: #ef6c00; }
-.menu-category[data-theme="fries-orange"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="fries-orange"] h2 {
+    color: #ef6c00;
+}
+
+.menu-category[data-theme="fries-orange"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Momos Category - Red/Spicy theme */
 .menu-category[data-theme="momos-red"] {
-    background-image: url('images/category-backgrounds/momos-red.jpg'); /* Placeholder for momos image */
+    background-image: url('images/category-backgrounds/momos-red.jpg');
+    /* Placeholder for momos image */
     background-color: var(--momos-red-bg);
-    color: #b71c1c; /* Dark red text */
+    color: #b71c1c;
+    /* Dark red text */
 }
-.menu-category[data-theme="momos-red"] h2 { color: #d32f2f; }
-.menu-category[data-theme="momos-red"]::before { background: rgba(255, 255, 255, 0.5); }
+
+.menu-category[data-theme="momos-red"] h2 {
+    color: #d32f2f;
+}
+
+.menu-category[data-theme="momos-red"]::before {
+    background: rgba(255, 255, 255, 0.5);
+}
 
 /* Special Menu Category - Elegant Purple theme */
 .menu-category[data-theme="special-purple"] {
-    background-image: url('images/category-backgrounds/special-purple.jpg'); /* Placeholder for special dessert image */
+    background-image: url('images/category-backgrounds/special-purple.jpg');
+    /* Placeholder for special dessert image */
     background-color: var(--special-purple-bg);
-    color: #4a148c; /* Dark purple text */
+    color: #4a148c;
+    /* Dark purple text */
 }
-.menu-category[data-theme="special-purple"] h2 { color: #7b1fa2; }
-.menu-category[data-theme="special-purple"]::before { background: rgba(255, 255, 255, 0.4); }
+
+.menu-category[data-theme="special-purple"] h2 {
+    color: #7b1fa2;
+}
+
+.menu-category[data-theme="special-purple"]::before {
+    background: rgba(255, 255, 255, 0.4);
+}
 
 
 /* --- MENU ITEM LIST --- */
@@ -284,9 +407,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 12px 0; /* Increased padding for better separation */
-    border-bottom: 1px dashed rgba(0,0,0,0.1); /* Subtle separator */
-    margin-bottom: 0; /* No margin, padding controls spacing */
+    padding: 12px 0;
+    /* Increased padding for better separation */
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    /* Subtle separator */
+    margin-bottom: 0;
+    /* No margin, padding controls spacing */
     position: relative;
 }
 
@@ -295,20 +421,31 @@ body {
 }
 
 .menu-item .price {
-    font-family: var(--font-family-price); /* Monospaced font for prices */
-    font-size: 1.25rem; /* Slightly larger for emphasis and readability */
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgba(0, 200, 0, 0.15);
+    font-family: var(--font-family-price);
+    /* Monospaced font for prices */
+    font-size: 1.1rem;
+    /* Slightly larger for emphasis and readability */
     font-weight: 700;
-    color: #1b5e20; /* A darker, more prominent green for prices */
+    color: #1b5e20;
+    /* A darker, more prominent green for prices */
     text-align: right;
-    margin-left: 15px; /* More space between name and price */
+    margin-left: 15px;
+    margin-right: 10px;
+    /* More space between name and price */
     white-space: nowrap;
-    line-height: 1.2; /* Adjust line height for multi-line prices */
+    line-height: 1.2;
+    /* Adjust line height for multi-line prices */
 }
+
 
 .menu-item .description {
     font-family: var(--font-family-base);
     font-size: 0.85rem;
-    color: #555; /* Slightly darker grey for better contrast */
+    color: #555;
+    /* Slightly darker grey for better contrast */
     margin-top: 3px;
     display: block;
     line-height: 1.3;
@@ -316,7 +453,8 @@ body {
 
 .special-item-badge {
     display: inline-block;
-    background-color: var(--accent-dark); /* Using darker blue from logo */
+    background-color: var(--accent-dark);
+    /* Using darker blue from logo */
     color: var(--white);
     padding: 4px 10px;
     border-radius: 5px;
@@ -329,9 +467,11 @@ body {
 
 .special-offer {
     display: inline-block;
-    background-color: var(--boba-yellow-bg); /* Using a softer yellow for offers, less jarring than bright yellow */
+    background-color: var(--boba-yellow-bg);
+    /* Using a softer yellow for offers, less jarring than bright yellow */
     color: #333;
-    font-size: 0.85rem; /* Slightly larger for visibility */
+    font-size: 0.85rem;
+    /* Slightly larger for visibility */
     padding: 4px 10px;
     border-radius: 5px;
     margin-left: 10px;
