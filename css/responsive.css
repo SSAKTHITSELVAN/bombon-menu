@@ -1,0 +1,38 @@
+/* --- PHONE RESPONSIVENESS ONLY --- */
+
+/* The primary stylesheet (style.css) is already mobile-first.
+  This file ensures the layout does not expand on larger screens like tablets or desktops,
+  maintaining the focused mobile experience as per the requirements.
+*/
+
+@media (min-width: 481px) {
+    body {
+        background-color: #e0e0e0; /* A neutral background for the desktop view */
+    }
+    .mobile-container {
+        /* On screens larger than 480px, the container remains fixed at 480px width */
+        max-width: 480px; 
+        margin: 20px auto; /* Center it with some margin */
+        min-height: 100vh;
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 360px) {
+    .category-link {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .menu-category h2 {
+        font-size: 1.8rem; /* Adjusted for very small screens */
+    }
+    .menu-item h3, .menu-item h4 { /* Corrected selector */
+        font-size: 1rem;
+    }
+    .header {
+        padding: 10px;
+    }
+    .category-nav {
+        top: 82px; /* Adjust sticky top position */
+    }
+}
